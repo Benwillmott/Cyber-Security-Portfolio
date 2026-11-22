@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY q3_flask_app.py /app/q3_flask_app.py
+
+RUN pip install flask bcrypt
+
+EXPOSE 5000
+
+CMD ["python3", "q3_flask_app.py"]
